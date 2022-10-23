@@ -95,6 +95,7 @@ def create_table():
       `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
       `url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
       `author` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+      `origin` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
       `publish_time` datetime DEFAULT NULL,
       `__biz` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
       `digest` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,

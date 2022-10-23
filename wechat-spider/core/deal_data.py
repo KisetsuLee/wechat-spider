@@ -363,6 +363,13 @@ class DealData:
             .extract_first(default="")
             .strip()
         )
+        origin = (
+            selector.xpath(
+                '//span[@id="copyright_logo"]//text()'
+            )
+            .extract_first(default="")
+            .strip()
+        )
 
         publish_timestamp = selector.re_first('n="(\d{10})"')
         publish_timestamp = int(publish_timestamp) if publish_timestamp else None
@@ -387,6 +394,7 @@ class DealData:
             "title": title,
             "url": req_url,
             "author": author,
+            "origin": origin,
             "publish_time": publish_time,
             "__biz": biz,
             "digest": digest,
