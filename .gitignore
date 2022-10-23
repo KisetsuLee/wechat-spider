@@ -16,3 +16,4 @@ test.py
 config.yaml
 mariadb_data/
 mitmproxy/
+mitmproxy-6.0.2-py3-none-any.whl

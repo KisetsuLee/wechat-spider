@@ -24,6 +24,7 @@ class WechatCapture():
             if 'mp/profile_ext?action=home' in url or 'mp/profile_ext?action=getmsg' in url:  # 文章列表 包括html格式和json格式
 
                 ctx.log.info('抽取文章列表数据')
+
                 next_page = deal_data.deal_article_list(url, flow.response.text)
 
                 flow.response.text = re.sub('<img.*?>', '', flow.response.text)

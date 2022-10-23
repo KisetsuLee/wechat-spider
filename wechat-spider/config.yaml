@@ -1,13 +1,13 @@
 mysqldb:
-  ip: "mariadb"
+  ip: "127.0.0.1"
   port: 3306
-  db: test
+  db: wechat
   user: root
-  passwd: "root"
-  auto_create_tables: True # 是否自动建表 建议当表不存在是设置为true，表存在是设置为false，加快软件启动速度
+  passwd: "123456"
+  auto_create_tables: False # 是否自动建表 建议当表不存在是设置为true，表存在是设置为false，加快软件启动速度
 
 redisdb:
-  ip: redis
+  ip: "127.0.0.1"
   port: 6379
   db: 0
   passwd:
@@ -23,7 +23,7 @@ spider:
   no_task_sleep_time: 3600 # 当无任务时休眠时间
   service_port: 8080 # 服务的端口
   # crawl_time_range: 2019-07-10 00:00:00~2019-07-01 00:00:00 # 抓取的时间范围 若不限制最近时间可写为 ~2019-07-01 00:00:00 若想抓取全部历史则不设置
-  crawl_time_range:
+  crawl_time_range: 2022-10-10 00:00:00~2022-10-22 00:00:00
 
 log:
   level: INFO
